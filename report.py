@@ -125,7 +125,6 @@ async def generate_and_push_report(ib):
                     'font': {'color': '#94a3b8'}
                 }
                 
-                import json
                 chart_json = json.dumps({'data': [trace_candle, trace_sma], 'layout': layout})
 
             positions.append({
