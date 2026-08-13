@@ -122,9 +122,11 @@ async def is_sniper_setup(ib, contract):
 
 def log_trade(symbol, action, price, sma, rsi, rationale_msg):
     history = []
-    if os.path.exists('trades.json'):
+    DIR = os.path.dirname(os.path.abspath(__file__))
+    trades_path = os.path.join(DIR, 'trades.json')
+    if os.path.exists(trades_path):
         try:
-            with open('trades.json', 'r') as f:
+            with open(trades_path, 'r') as f:
                 history = json.load(f)
         except:
             pass
@@ -143,7 +145,7 @@ def log_trade(symbol, action, price, sma, rsi, rationale_msg):
     # Keep only last 30 days of trades by date (simple approach: keep last 100 trades)
     history = history[-100:]
     
-    with open('trades.json', 'w') as f:
+    with open(trades_path, 'w') as f:
         json.dump(history, f, indent=4)
 
 async def main():

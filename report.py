@@ -9,13 +9,15 @@ from ib_async import Stock, util
 
 async def generate_and_push_report(ib):
     # Load history
+    DIR = os.path.dirname(os.path.abspath(__file__))
+    trades_path = os.path.join(DIR, 'trades.json')
     history = []
-    if os.path.exists('trades.json'):
+    if os.path.exists(trades_path):
         try:
-            with open('trades.json', 'r') as f:
+            with open(trades_path, 'r') as f:
                 history = json.load(f)
-        except:
-            pass
+        except Exception as e:
+            print(f"Error loading trades.json: {e}")
 
     # Subscribe to PnL
     # Assuming account is the first one
@@ -37,102 +39,113 @@ async def generate_and_push_report(ib):
     # Get active positions
     positions = []
     for pos in ib.positions():
-        symbol = pos.contract.symbol
-        qty = pos.position
-        avg_cost = pos.avgCost
-        
-        # Get live data for position
-        ib.reqMarketDataType(3) 
-        ticker = ib.reqMktData(pos.contract, snapshot=True)
-        for _ in range(50):
-            await asyncio.sleep(0.1)
-            if not pd.isna(ticker.last) or not pd.isna(ticker.bid) or not pd.isna(ticker.close):
-                break
-                
-        price = ticker.last if not pd.isna(ticker.last) else 0
-        if price == 0 or pd.isna(price):
-             if not pd.isna(ticker.bid) and not pd.isna(ticker.ask) and ticker.bid > 0 and ticker.ask > 0:
-                  price = (ticker.bid + ticker.ask) / 2
-             elif not pd.isna(ticker.close):
-                  price = ticker.close
-                  
-        pos_unrealized = (price - avg_cost) * qty if price > 0 else 0.0
+        try:
+            symbol = pos.contract.symbol
+            qty = pos.position
+            avg_cost = pos.avgCost
+            
+            # Get live data for position
+            ib.reqMarketDataType(3) 
+            ticker = ib.reqMktData(pos.contract, snapshot=True)
+            for _ in range(50):
+                await asyncio.sleep(0.1)
+                if not pd.isna(ticker.last) or not pd.isna(ticker.bid) or not pd.isna(ticker.close):
+                    break
+                    
+            price = ticker.last if not pd.isna(ticker.last) else 0
+            if price == 0 or pd.isna(price):
+                 if not pd.isna(ticker.bid) and not pd.isna(ticker.ask) and ticker.bid > 0 and ticker.ask > 0:
+                      price = (ticker.bid + ticker.ask) / 2
+                 elif not pd.isna(ticker.close):
+                      price = ticker.close
+                      
+            pos_unrealized = (price - avg_cost) * qty if price > 0 else 0.0
 
-        # Try to find rationale in history
-        rationale = None
-        for trade in reversed(history):
-            if trade['symbol'] == symbol:
-                rationale = trade
-                break
+            # Try to find rationale in history
+            rationale = None
+            for trade in reversed(history):
+                if trade['symbol'] == symbol:
+                    rationale = trade
+                    break
+                    
+            # If no rationale is found, it's a manual trade. Skip it.
+            if not rationale:
+                continue
+                    
+            # Generate chart
+            # We must qualify the contract to request historical data
+            contract = pos.contract
+            try:
+                await ib.qualifyContractsAsync(contract)
+            except:
+                pass
                 
-        # If no rationale is found, it's a manual trade. Skip it.
-        if not rationale:
+            # Fetch 60 days of data for the chart
+            bars = await ib.reqHistoricalDataAsync(
+                contract,
+                endDateTime='',
+                durationStr='60 D',
+                barSizeSetting='1 day',
+                whatToShow='TRADES',
+                useRTH=True,
+                formatDate=1
+            )
+            
+            chart_json = "{}"
+            if bars:
+                df = util.df(bars)
+                df['SMA_50'] = df['close'].rolling(window=50).mean()
+                
+                # Create Plotly figure as dict to convert to JSON
+                trace_candle = {
+                    'x': df['date'].astype(str).tolist(),
+                    'open': df['open'].tolist(),
+                    'high': df['high'].tolist(),
+                    'low': df['low'].tolist(),
+                    'close': df['close'].tolist(),
+                    'type': 'candlestick',
+                    'name': symbol
+                }
+                
+                trace_sma = {
+                    'x': df['date'].astype(str).tolist(),
+                    'y': df['SMA_50'].tolist(),
+                    'type': 'scatter',
+                    'mode': 'lines',
+                    'name': '50 SMA',
+                    'line': {'color': 'blue'}
+                }
+                
+                layout = {
+                    'paper_bgcolor': 'rgba(0,0,0,0)',
+                    'plot_bgcolor': 'rgba(0,0,0,0)',
+                    'margin': {'l': 30, 'r': 30, 'b': 30, 't': 10},
+                    'xaxis': {'rangeslider': {'visible': False}, 'gridcolor': '#334155'},
+                    'yaxis': {'gridcolor': '#334155'},
+                    'font': {'color': '#94a3b8'}
+                }
+                
+                import json
+                chart_json = json.dumps({'data': [trace_candle, trace_sma], 'layout': layout})
+
+            positions.append({
+                'symbol': symbol,
+                'quantity': qty,
+                'avg_cost': avg_cost,
+                'market_price': price,
+                'unrealized_pnl': pos_unrealized,
+                'rationale': rationale,
+                'chart_json': chart_json
+            })
+        except Exception as e:
+            print(f"Error processing position {pos.contract.symbol}: {e}")
             continue
-                
-        # Generate chart
-        # Fetch 60 days of data for the chart
-        bars = await ib.reqHistoricalDataAsync(
-            pos.contract,
-            endDateTime='',
-            durationStr='60 D',
-            barSizeSetting='1 day',
-            whatToShow='TRADES',
-            useRTH=True,
-            formatDate=1
-        )
-        
-        chart_json = "{}"
-        if bars:
-            df = util.df(bars)
-            df['SMA_50'] = df['close'].rolling(window=50).mean()
-            
-            # Create Plotly figure as dict to convert to JSON
-            trace_candle = {
-                'x': df['date'].astype(str).tolist(),
-                'open': df['open'].tolist(),
-                'high': df['high'].tolist(),
-                'low': df['low'].tolist(),
-                'close': df['close'].tolist(),
-                'type': 'candlestick',
-                'name': symbol
-            }
-            
-            trace_sma = {
-                'x': df['date'].astype(str).tolist(),
-                'y': df['SMA_50'].tolist(),
-                'type': 'scatter',
-                'mode': 'lines',
-                'name': '50 SMA',
-                'line': {'color': 'blue'}
-            }
-            
-            layout = {
-                'paper_bgcolor': 'rgba(0,0,0,0)',
-                'plot_bgcolor': 'rgba(0,0,0,0)',
-                'margin': {'l': 30, 'r': 30, 'b': 30, 't': 10},
-                'xaxis': {'rangeslider': {'visible': False}, 'gridcolor': '#334155'},
-                'yaxis': {'gridcolor': '#334155'},
-                'font': {'color': '#94a3b8'}
-            }
-            
-            import json
-            chart_json = json.dumps({'data': [trace_candle, trace_sma], 'layout': layout})
-
-        positions.append({
-            'symbol': symbol,
-            'quantity': qty,
-            'avg_cost': avg_cost,
-            'market_price': price,
-            'unrealized_pnl': pos_unrealized,
-            'rationale': rationale,
-            'chart_json': chart_json
-        })
         
     # Calculate total unrealized PnL strictly from the bot's positions
     bot_unrealized_pnl = sum(pos['unrealized_pnl'] for pos in positions)
     
     # Render HTML
-    env = Environment(loader=FileSystemLoader('.'))
+    env = Environment(loader=FileSystemLoader(DIR))
     template = env.get_template('template.html')
     
     html_out = template.render(
@@ -143,7 +156,8 @@ async def generate_and_push_report(ib):
         history=history
     )
     
-    with open('index.html', 'w') as f:
+    index_path = os.path.join(DIR, 'index.html')
+    with open(index_path, 'w') as f:
         f.write(html_out)
         
     print("Generated index.html successfully.")
