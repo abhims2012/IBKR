@@ -166,6 +166,9 @@ async def main():
         now_aest = datetime.datetime.now(aest)
         current_date = now_aest.date()
 
+        await ib.reqPositionsAsync()
+        await asyncio.sleep(1)
+
         # Generate report every 1 hour
         if last_report_time is None or (now_aest - last_report_time).total_seconds() >= 3600:
             print("--- Generating Hourly HTML Report ---")
@@ -184,9 +187,6 @@ async def main():
 
         print(f"\n--- Starting Scan at {now_aest.strftime('%Y-%m-%d %H:%M:%S %Z')} ---")
         print(f"Current Daily Spend: USD ${daily_spend['USD']:.2f}/{DAILY_SPEND_LIMIT_USD} | AUD ${daily_spend['AUD']:.2f}/{DAILY_SPEND_LIMIT_AUD}")
-        
-        await ib.reqPositionsAsync()
-        await asyncio.sleep(1) 
 
         open_positions_count = len(ib.positions())
         print(f"Current open positions: {open_positions_count}/{MAX_POSITIONS}")
