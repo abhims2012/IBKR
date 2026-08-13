@@ -150,7 +150,7 @@ async def generate_and_push_report(ib):
     
     # Run Git Commands to publish
     try:
-        subprocess.run(['git', 'add', 'index.html', 'trades.json'], check=True)
+        subprocess.run(['git', 'add', '.'], check=True)
         subprocess.run(['git', 'commit', '-m', f"Auto-update report {datetime.datetime.now().isoformat()}"], check=True)
         subprocess.run(['git', 'push'], check=True)
         print("Pushed to GitHub Pages successfully.")
