@@ -44,9 +44,15 @@ async def generate_and_push_report(ib):
             qty = pos.position
             avg_cost = pos.avgCost
             
+            contract = pos.contract
+            try:
+                await ib.qualifyContractsAsync(contract)
+            except:
+                pass
+            
             # Get live data for position
             ib.reqMarketDataType(3) 
-            ticker = ib.reqMktData(pos.contract, snapshot=True)
+            ticker = ib.reqMktData(contract, snapshot=True)
             for _ in range(50):
                 await asyncio.sleep(0.1)
                 if not pd.isna(ticker.last) or not pd.isna(ticker.bid) or not pd.isna(ticker.close):
@@ -73,13 +79,6 @@ async def generate_and_push_report(ib):
                 continue
                     
             # Generate chart
-            # We must qualify the contract to request historical data
-            contract = pos.contract
-            try:
-                await ib.qualifyContractsAsync(contract)
-            except:
-                pass
-                
             # Fetch 60 days of data for the chart
             bars = await ib.reqHistoricalDataAsync(
                 contract,
