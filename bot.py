@@ -12,7 +12,8 @@ PORT = 7497 # 7497 is typical for TWS paper trading. 4002 for IB Gateway paper t
 CLIENT_ID = 1
 
 # Strategy Settings
-MAX_POSITIONS = 4
+MAX_POSITIONS_AUD = 4
+MAX_POSITIONS_USD = 4
 MAX_ORDER_SIZE_USD = 100.0
 MAX_ORDER_SIZE_AUD = 500.0
 DAILY_SPEND_LIMIT_USD = 1500.0
@@ -201,19 +202,23 @@ async def main():
             except:
                 pass
                 
-        bot_positions = 0
+        bot_positions_aud = 0
+        bot_positions_usd = 0
         for pos in ib.positions():
             symbol = pos.contract.symbol
+            currency = pos.contract.currency
             is_bot = False
             for trade in reversed(history):
                 if trade['symbol'] == symbol:
                     is_bot = True
                     break
             if is_bot:
-                bot_positions += 1
+                if currency == 'AUD':
+                    bot_positions_aud += 1
+                elif currency == 'USD':
+                    bot_positions_usd += 1
                 
-        open_positions_count = bot_positions
-        print(f"Current open positions (Bot only): {open_positions_count}/{MAX_POSITIONS}")
+        print(f"Current open positions (Bot only): AUD {bot_positions_aud}/{MAX_POSITIONS_AUD} | USD {bot_positions_usd}/{MAX_POSITIONS_USD}")
 
         for asset in WATCHLIST:
             symbol = asset['symbol']
@@ -224,9 +229,12 @@ async def main():
                 print(f"[{symbol}] Market ({currency}) is closed. Skipping.")
                 continue
 
-            if open_positions_count >= MAX_POSITIONS:
-                print("Maximum positions (4) reached. Holding for exits...")
-                break
+            if currency == 'AUD' and bot_positions_aud >= MAX_POSITIONS_AUD:
+                print(f"Maximum AUD positions ({MAX_POSITIONS_AUD}) reached. Holding for exits...")
+                continue
+            elif currency == 'USD' and bot_positions_usd >= MAX_POSITIONS_USD:
+                print(f"Maximum USD positions ({MAX_POSITIONS_USD}) reached. Holding for exits...")
+                continue
 
             contract = Stock(symbol, exchange, currency)
             try:
