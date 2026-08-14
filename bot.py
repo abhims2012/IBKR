@@ -190,8 +190,30 @@ async def main():
         print(f"\n--- Starting Scan at {now_aest.strftime('%Y-%m-%d %H:%M:%S %Z')} ---")
         print(f"Current Daily Spend: USD ${daily_spend['USD']:.2f}/{DAILY_SPEND_LIMIT_USD} | AUD ${daily_spend['AUD']:.2f}/{DAILY_SPEND_LIMIT_AUD}")
 
-        open_positions_count = len(ib.positions())
-        print(f"Current open positions: {open_positions_count}/{MAX_POSITIONS}")
+        # Count only bot positions
+        DIR = os.path.dirname(os.path.abspath(__file__))
+        trades_path = os.path.join(DIR, 'trades.json')
+        history = []
+        if os.path.exists(trades_path):
+            try:
+                with open(trades_path, 'r') as f:
+                    history = json.load(f)
+            except:
+                pass
+                
+        bot_positions = 0
+        for pos in ib.positions():
+            symbol = pos.contract.symbol
+            is_bot = False
+            for trade in reversed(history):
+                if trade['symbol'] == symbol:
+                    is_bot = True
+                    break
+            if is_bot:
+                bot_positions += 1
+                
+        open_positions_count = bot_positions
+        print(f"Current open positions (Bot only): {open_positions_count}/{MAX_POSITIONS}")
 
         for asset in WATCHLIST:
             symbol = asset['symbol']
@@ -202,7 +224,6 @@ async def main():
                 print(f"[{symbol}] Market ({currency}) is closed. Skipping.")
                 continue
 
-            open_positions_count = len(ib.positions())
             if open_positions_count >= MAX_POSITIONS:
                 print("Maximum positions (4) reached. Holding for exits...")
                 break
