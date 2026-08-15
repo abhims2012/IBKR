@@ -1,0 +1,502 @@
+[
+    {
+        "symbol": "AAPL",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "MSFT",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "NVDA",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "AMZN",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "META",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "GOOGL",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "TSLA",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "BRK.B",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "AVGO",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "JPM",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "UNH",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "LLY",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "V",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "XOM",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "JNJ",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "PG",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "MA",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "HD",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "CVX",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "MRK",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "ABBV",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "PEP",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "COST",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "KO",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "ADBE",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "WMT",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "MCD",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "CRM",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "TMO",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "CSCO",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "ACN",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "BAC",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "NFLX",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "LIN",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "AMD",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "CMCSA",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "INTC",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "ABT",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "ORCL",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "DHR",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "PFE",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "WFC",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "TXN",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "DIS",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "PM",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "COP",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "VZ",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "NEE",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "INTU",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "QCOM",
+        "exchange": "SMART",
+        "currency": "USD"
+    },
+    {
+        "symbol": "BHP",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "CBA",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "CSL",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "NAB",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "WBC",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "ANZ",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "MQG",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "WES",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "TLS",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "RIO",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "GMG",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "TCL",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "FMG",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "WOW",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "COL",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "STO",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "WDS",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "ALL",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "QBE",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "SCG",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "BXB",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "NCM",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "COH",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "SUN",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "MIN",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "RMD",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "REA",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "AMC",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "SHL",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "S32",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "SGP",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "PLS",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "IAG",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "CPU",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "NST",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "BSL",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "XRO",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "ORG",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "FPH",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "VCX",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "APA",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "TRE",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "ASX",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "SEK",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "SVW",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "ALX",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "CAR",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "TWE",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "GPT",
+        "exchange": "SMART",
+        "currency": "AUD"
+    },
+    {
+        "symbol": "AWC",
+        "exchange": "SMART",
+        "currency": "AUD"
+    }
+]

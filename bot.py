@@ -12,8 +12,8 @@ PORT = 7497 # 7497 is typical for TWS paper trading. 4002 for IB Gateway paper t
 CLIENT_ID = 1
 
 # Strategy Settings
-MAX_POSITIONS_AUD = 4
-MAX_POSITIONS_USD = 4
+MAX_POSITIONS_AUD = 8
+MAX_POSITIONS_USD = 10
 MAX_ORDER_SIZE_USD = 100.0
 MAX_ORDER_SIZE_AUD = 500.0
 DAILY_SPEND_LIMIT_USD = 1500.0
@@ -23,14 +23,16 @@ STOP_LOSS_PCT = 0.05   # 5%
 SCAN_INTERVAL_SECONDS = 300 # Scan every 5 minutes
 
 # Mixed Watchlist for US and Australian stocks
-WATCHLIST = [
-    {'symbol': 'AAPL', 'exchange': 'SMART', 'currency': 'USD'},
-    {'symbol': 'MSFT', 'exchange': 'SMART', 'currency': 'USD'},
-    {'symbol': 'SPY',  'exchange': 'SMART', 'currency': 'USD'},
-    {'symbol': 'BHP',  'exchange': 'SMART', 'currency': 'AUD'},
-    {'symbol': 'CBA',  'exchange': 'SMART', 'currency': 'AUD'},
-    {'symbol': 'CSL',  'exchange': 'SMART', 'currency': 'AUD'},
-]
+def get_watchlist():
+    DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(DIR, 'watchlist.json')
+    if os.path.exists(path):
+        try:
+            with open(path, 'r') as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading watchlist.json: {e}")
+    return []
 
 # Track daily spend per currency
 daily_spend = {
@@ -65,6 +67,9 @@ async def is_sniper_setup(ib, contract):
     2. Oversold (1-hour 14-period RSI < 30)
     """
     try:
+        # IBKR Pacing Protection
+        await asyncio.sleep(0.5)
+
         # 1. Fetch Daily Data for 50-SMA
         daily_bars = await ib.reqHistoricalDataAsync(
             contract,
@@ -219,6 +224,10 @@ async def main():
                     bot_positions_usd += 1
                 
         print(f"Current open positions (Bot only): AUD {bot_positions_aud}/{MAX_POSITIONS_AUD} | USD {bot_positions_usd}/{MAX_POSITIONS_USD}")
+
+        WATCHLIST = get_watchlist()
+        if not WATCHLIST:
+            print("Watchlist is empty or missing! Skipping scan.")
 
         for asset in WATCHLIST:
             symbol = asset['symbol']
