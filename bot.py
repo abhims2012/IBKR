@@ -43,20 +43,36 @@ daily_spend = {
 
 def is_market_open(currency, current_time_aest):
     """
-    Checks if a specific market is open based on the currency and the current AEST time.
-    Note: Aesthetically simplified. Does not account for weekends or public holidays.
+    Checks if a specific market is open based on the currency, time, and day of the week (AEST).
     """
     time_only = current_time_aest.time()
+    day_of_week = current_time_aest.weekday() # 0 = Monday, 6 = Sunday
     
     if currency == 'USD':
-        start = datetime.time(23, 55)
+        # US Market in AEST: Monday 23:30 to Saturday 07:00
+        start = datetime.time(23, 30)
         end = datetime.time(7, 0)
-        return time_only >= start or time_only <= end
         
+        # Tuesday(1) through Friday(4): Open early morning AND late night
+        if day_of_week in [1, 2, 3, 4]:
+            return time_only >= start or time_only <= end
+        # Monday(0): Only open late night
+        elif day_of_week == 0:
+            return time_only >= start
+        # Saturday(5): Only open early morning (wrapping up Friday US session)
+        elif day_of_week == 5:
+            return time_only <= end
+        else:
+            return False
+            
     elif currency == 'AUD':
+        # ASX in AEST: Monday(0) to Friday(4), 10:00 to 16:00
         start = datetime.time(10, 0)
         end = datetime.time(16, 0)
-        return start <= time_only <= end
+        
+        if day_of_week in [0, 1, 2, 3, 4]:
+            return start <= time_only <= end
+        return False
         
     return False
 
@@ -81,7 +97,7 @@ async def is_sniper_setup(ib, contract):
             formatDate=1
         )
         if not daily_bars or len(daily_bars) < 50:
-            return False, "Not enough daily data for 50-SMA."
+            return False, "Not enough daily data for 50-SMA.", 0, 0
             
         df_daily = util.df(daily_bars)
         
@@ -92,7 +108,7 @@ async def is_sniper_setup(ib, contract):
         current_daily_close = df_daily['close'].iloc[-1]
 
         if current_daily_close <= current_sma:
-            return False, f"Price ({current_daily_close}) is below 50-SMA ({current_sma:.2f}). Not in an uptrend."
+            return False, f"Price ({current_daily_close}) is below 50-SMA ({current_sma:.2f}). Not in an uptrend.", current_sma, 0
 
         # 2. Fetch Hourly Data for 14-RSI
         hourly_bars = await ib.reqHistoricalDataAsync(
@@ -105,7 +121,7 @@ async def is_sniper_setup(ib, contract):
             formatDate=1
         )
         if not hourly_bars or len(hourly_bars) < 15:
-            return False, "Not enough hourly data for 14-RSI."
+            return False, "Not enough hourly data for 14-RSI.", current_sma, 0
 
         df_hourly = util.df(hourly_bars)
         
@@ -119,7 +135,7 @@ async def is_sniper_setup(ib, contract):
         current_rsi = df_hourly['RSI_14'].iloc[-1]
 
         if current_rsi >= 30:
-            return False, f"Hourly RSI is {current_rsi:.2f} (Needs to be < 30)."
+            return False, f"Hourly RSI is {current_rsi:.2f} (Needs to be < 30).", current_sma, current_rsi
 
         return True, f"Sniper setup found! Price > 50-SMA & 1H-RSI = {current_rsi:.2f}", current_sma, current_rsi
 
