@@ -1,1 +1,47 @@
-[{"date": "2026-08-13 14:00:00", "symbol": "BHP", "action": "BUY", "price": 63.07, "sma": 62.0, "rsi": 25.0, "rationale": "Recovered trade"}, {"date": "2026-08-13 13:00:00", "symbol": "CBA", "action": "BUY", "price": 167.75, "sma": 165.0, "rsi": 28.0, "rationale": "Recovered trade"}, {"date": "2026-08-13 12:00:00", "symbol": "CSL", "action": "BUY", "price": 137.28, "sma": 135.0, "rsi": 29.0, "rationale": "Recovered trade"}]
+[
+    {
+        "date": "2026-08-13 14:00:00",
+        "symbol": "BHP",
+        "action": "BUY",
+        "price": 63.07,
+        "sma": 62.0,
+        "rsi": 25.0,
+        "rationale": "Recovered trade"
+    },
+    {
+        "date": "2026-08-13 13:00:00",
+        "symbol": "CBA",
+        "action": "BUY",
+        "price": 167.75,
+        "sma": 165.0,
+        "rsi": 28.0,
+        "rationale": "Recovered trade"
+    },
+    {
+        "date": "2026-08-13 12:00:00",
+        "symbol": "CSL",
+        "action": "BUY",
+        "price": 137.28,
+        "sma": 135.0,
+        "rsi": 29.0,
+        "rationale": "Recovered trade"
+    },
+    {
+        "date": "2026-08-17 10:23:37",
+        "symbol": "NAB",
+        "action": "BUY",
+        "price": 39.54,
+        "sma": 39.3568,
+        "rsi": 21.7619699599409,
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 21.76"
+    },
+    {
+        "date": "2026-08-17 10:43:33",
+        "symbol": "BXB",
+        "action": "BUY",
+        "price": 19.36,
+        "sma": 19.284200000000002,
+        "rsi": 29.424345110918438,
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.42"
+    }
+]
