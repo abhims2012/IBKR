@@ -211,9 +211,9 @@ async def main():
         await ib.reqPositionsAsync()
         await asyncio.sleep(1)
 
-        # Generate report every 1 hour
-        if last_report_time is None or (now_aest - last_report_time).total_seconds() >= 3600:
-            print("--- Generating Hourly HTML Report ---")
+        # Generate report every 15 minutes
+        if last_report_time is None or (now_aest - last_report_time).total_seconds() >= 900:
+            print("--- Generating 15-Min HTML Report ---")
             try:
                 await generate_and_push_report(ib)
                 last_report_time = now_aest
