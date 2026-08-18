@@ -43,5 +43,14 @@
         "sma": 19.284200000000002,
         "rsi": 29.424345110918438,
         "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.42"
+    },
+    {
+        "date": "2026-08-18 11:40:17",
+        "symbol": "CPU",
+        "action": "BUY",
+        "price": 39.685,
+        "sma": 39.2737,
+        "rsi": 29.269237585641932,
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.27"
     }
 ]
