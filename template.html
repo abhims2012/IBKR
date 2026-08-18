@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
     <title>AlgoSniper Dashboard</title>
     <!-- PWA Setup -->
     <link rel="manifest" href="manifest.json">
@@ -182,6 +183,16 @@
                 });
             });
         }
+
+        // Auto-refresh when bringing the app back from the background
+        document.addEventListener("visibilitychange", function() {
+            if (document.visibilityState === 'visible') {
+                // Wait 1 second for network to wake up, then bypass cache
+                setTimeout(function(){
+                    window.location.reload(true);
+                }, 1000);
+            }
+        });
     </script>
 </body>
 </html>

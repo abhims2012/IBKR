@@ -52,5 +52,14 @@
         "sma": 39.2737,
         "rsi": 29.269237585641932,
         "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.27"
+    },
+    {
+        "date": "2026-08-18 11:42:37",
+        "symbol": "MQG",
+        "action": "BUY",
+        "price": 256.24,
+        "sma": 253.72119999999998,
+        "rsi": 28.359717221649476,
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 28.36"
     }
 ]
