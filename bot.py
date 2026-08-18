@@ -80,7 +80,7 @@ async def is_sniper_setup(ib, contract):
     """
     Checks if the stock meets the sniper criteria:
     1. Uptrend (Current price > 50-day SMA)
-    2. Oversold (1-hour 14-period RSI < 30)
+    2. Oversold (15-min 14-period RSI < 30)
     """
     try:
         # IBKR Pacing Protection
@@ -119,7 +119,7 @@ async def is_sniper_setup(ib, contract):
                 contract,
                 endDateTime='',
                 durationStr='10 D',
-                barSizeSetting='1 hour',
+                barSizeSetting='15 mins',
                 whatToShow='TRADES',
                 useRTH=True,
                 formatDate=1
@@ -141,9 +141,9 @@ async def is_sniper_setup(ib, contract):
         current_rsi = df_hourly['RSI_14'].iloc[-1]
 
         if current_rsi >= 30:
-            return False, f"Hourly RSI is {current_rsi:.2f} (Needs to be < 30).", current_sma, current_rsi
+            return False, f"15-Min RSI is {current_rsi:.2f} (Needs to be < 30).", current_sma, current_rsi
 
-        return True, f"Sniper setup found! Price > 50-SMA & 1H-RSI = {current_rsi:.2f}", current_sma, current_rsi
+        return True, f"Sniper setup found! Price > 50-SMA & 15M-RSI = {current_rsi:.2f}", current_sma, current_rsi
 
     except asyncio.TimeoutError:
         return False, "Timeout: IBKR failed to respond with data within 15 seconds.", 0, 0
