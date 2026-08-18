@@ -6,7 +6,8 @@
         "price": 63.07,
         "sma": 62.0,
         "rsi": 25.0,
-        "rationale": "Recovered trade"
+        "rationale": "Recovered trade",
+        "currency": "AUD"
     },
     {
         "date": "2026-08-13 13:00:00",
@@ -15,7 +16,8 @@
         "price": 167.75,
         "sma": 165.0,
         "rsi": 28.0,
-        "rationale": "Recovered trade"
+        "rationale": "Recovered trade",
+        "currency": "AUD"
     },
     {
         "date": "2026-08-13 12:00:00",
@@ -24,7 +26,8 @@
         "price": 137.28,
         "sma": 135.0,
         "rsi": 29.0,
-        "rationale": "Recovered trade"
+        "rationale": "Recovered trade",
+        "currency": "AUD"
     },
     {
         "date": "2026-08-17 10:23:37",
@@ -33,7 +36,8 @@
         "price": 39.54,
         "sma": 39.3568,
         "rsi": 21.7619699599409,
-        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 21.76"
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 21.76",
+        "currency": "AUD"
     },
     {
         "date": "2026-08-17 10:43:33",
@@ -42,7 +46,8 @@
         "price": 19.36,
         "sma": 19.284200000000002,
         "rsi": 29.424345110918438,
-        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.42"
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.42",
+        "currency": "AUD"
     },
     {
         "date": "2026-08-18 11:40:17",
@@ -51,7 +56,8 @@
         "price": 39.685,
         "sma": 39.2737,
         "rsi": 29.269237585641932,
-        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.27"
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 29.27",
+        "currency": "AUD"
     },
     {
         "date": "2026-08-18 11:42:37",
@@ -60,6 +66,7 @@
         "price": 256.24,
         "sma": 253.72119999999998,
         "rsi": 28.359717221649476,
-        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 28.36"
+        "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 28.36",
+        "currency": "USD"
     }
 ]

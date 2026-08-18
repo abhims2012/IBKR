@@ -150,7 +150,7 @@ async def is_sniper_setup(ib, contract):
     except Exception as e:
         return False, f"Error calculating technicals: {e}", 0, 0
 
-def log_trade(symbol, action, price, sma, rsi, rationale_msg):
+def log_trade(symbol, action, price, sma, rsi, rationale_msg, currency=''):
     history = []
     DIR = os.path.dirname(os.path.abspath(__file__))
     trades_path = os.path.join(DIR, 'trades.json')
@@ -168,7 +168,8 @@ def log_trade(symbol, action, price, sma, rsi, rationale_msg):
         'price': price,
         'sma': sma,
         'rsi': rsi,
-        'rationale': rationale_msg
+        'rationale': rationale_msg,
+        'currency': currency
     }
     history.append(trade)
     
@@ -348,7 +349,7 @@ async def main():
             print(f"[{symbol}] Bracket order placed. TP: ${round(price * (1 + TAKE_PROFIT_PCT), 2)}, SL: ${round(price * (1 - STOP_LOSS_PCT), 2)}")
             
             # Log the trade rationale
-            log_trade(symbol, 'BUY', price, current_sma, current_rsi, setup_msg)
+            log_trade(symbol, 'BUY', price, current_sma, current_rsi, setup_msg, currency)
             
             # Update daily spend
             daily_spend[currency] += total_value
