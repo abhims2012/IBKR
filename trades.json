@@ -68,5 +68,15 @@
         "rsi": 28.359717221649476,
         "rationale": "Sniper setup found! Price > 50-SMA & 1H-RSI = 28.36",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-08-19 07:51:08",
+        "symbol": "AAPL",
+        "action": "BUY",
+        "price": 310.03,
+        "sma": 0,
+        "rsi": 0,
+        "rationale": "Manual Test Trade to verify US routing",
+        "currency": "USD"
     }
 ]
