@@ -87,14 +87,17 @@ async def is_sniper_setup(ib, contract):
         await asyncio.sleep(0.5)
 
         # 1. Fetch Daily Data for 50-SMA
-        daily_bars = await ib.reqHistoricalDataAsync(
-            contract,
-            endDateTime='',
-            durationStr='100 D', # 100 days
-            barSizeSetting='1 day',
-            whatToShow='TRADES',
-            useRTH=True,
-            formatDate=1
+        daily_bars = await asyncio.wait_for(
+            ib.reqHistoricalDataAsync(
+                contract,
+                endDateTime='',
+                durationStr='100 D', # 100 days
+                barSizeSetting='1 day',
+                whatToShow='TRADES',
+                useRTH=True,
+                formatDate=1
+            ),
+            timeout=15.0
         )
         if not daily_bars or len(daily_bars) < 50:
             return False, "Not enough daily data for 50-SMA.", 0, 0
@@ -111,14 +114,17 @@ async def is_sniper_setup(ib, contract):
             return False, f"Price ({current_daily_close}) is below 50-SMA ({current_sma:.2f}). Not in an uptrend.", current_sma, 0
 
         # 2. Fetch Hourly Data for 14-RSI
-        hourly_bars = await ib.reqHistoricalDataAsync(
-            contract,
-            endDateTime='',
-            durationStr='10 D',
-            barSizeSetting='1 hour',
-            whatToShow='TRADES',
-            useRTH=True,
-            formatDate=1
+        hourly_bars = await asyncio.wait_for(
+            ib.reqHistoricalDataAsync(
+                contract,
+                endDateTime='',
+                durationStr='10 D',
+                barSizeSetting='1 hour',
+                whatToShow='TRADES',
+                useRTH=True,
+                formatDate=1
+            ),
+            timeout=15.0
         )
         if not hourly_bars or len(hourly_bars) < 15:
             return False, "Not enough hourly data for 14-RSI.", current_sma, 0
@@ -139,6 +145,8 @@ async def is_sniper_setup(ib, contract):
 
         return True, f"Sniper setup found! Price > 50-SMA & 1H-RSI = {current_rsi:.2f}", current_sma, current_rsi
 
+    except asyncio.TimeoutError:
+        return False, "Timeout: IBKR failed to respond with data within 15 seconds.", 0, 0
     except Exception as e:
         return False, f"Error calculating technicals: {e}", 0, 0
 
@@ -187,6 +195,16 @@ async def main():
     last_report_time = None
 
     while True:
+        if not ib.isConnected():
+            print("Connection to IBKR lost. Attempting to reconnect...")
+            try:
+                await ib.connectAsync('127.0.0.1', PORT, clientId=CLIENT_ID)
+                print("Reconnected successfully.")
+            except Exception as e:
+                print(f"Reconnection failed: {e}. Retrying in 10 seconds...")
+                await asyncio.sleep(10)
+                continue
+                
         now_aest = datetime.datetime.now(aest)
         current_date = now_aest.date()
 

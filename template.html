@@ -170,6 +170,49 @@
             </div>
         </section>
         
+        <!-- Strategy Summary -->
+        <section class="mt-8 mb-8">
+            <h2 class="text-2xl font-semibold text-white mb-4">Bot Strategy & Constraints</h2>
+            <div class="bg-slate-800 rounded-2xl border border-slate-700 p-6 text-slate-300 text-sm leading-relaxed">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div>
+                        <h3 class="text-emerald-400 font-bold mb-2">1. Sniper Logic</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Uptrend:</strong> Price &gt; 50-day SMA</li>
+                            <li><strong>Oversold Dip:</strong> 1-hour 14-RSI &lt; 30</li>
+                            <li><strong>Frequency:</strong> Scans every 5 mins</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-400 font-bold mb-2">2. Position Management</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Take Profit:</strong> +10%</li>
+                            <li><strong>Stop Loss:</strong> -5%</li>
+                            <li><strong>Max ASX Trades:</strong> 8 concurrent</li>
+                            <li><strong>Max US Trades:</strong> 10 concurrent</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-purple-400 font-bold mb-2">3. Capital Limits</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong>Max ASX Order:</strong> $500 AUD</li>
+                            <li><strong>Max US Order:</strong> $100 USD</li>
+                            <li><strong>Daily ASX Limit:</strong> $1500 AUD</li>
+                            <li><strong>Daily US Limit:</strong> $1500 USD</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-amber-400 font-bold mb-2">4. Watchlist</h3>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Top 50 US Stocks (S&P 100)</li>
+                            <li>Top 50 ASX Stocks (ASX 50)</li>
+                            <li><em>Editable via watchlist.json</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <!-- PWA Service Worker Registration -->
