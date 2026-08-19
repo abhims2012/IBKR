@@ -8,6 +8,12 @@ from jinja2 import Environment, FileSystemLoader
 from ib_async import Stock, util
 
 async def generate_and_push_report(ib):
+    meta_data = {}
+    try:
+        with open(os.path.join(DIR, 'company_meta.json'), 'r') as f:
+            meta_data = json.load(f)
+    except:
+        pass
     # Load company metadata
     meta_data = {}
     try:
@@ -49,6 +55,10 @@ async def generate_and_push_report(ib):
         try:
             symbol = pos.contract.symbol
             qty = pos.position
+            comp_meta = meta_data.get(symbol, {'name': symbol, 'sector': 'Unknown'})
+            name = comp_meta.get('name', symbol)
+            sector = comp_meta.get('sector', 'Unknown')
+            currency = pos.contract.currency
             avg_cost = pos.avgCost
             
             contract = pos.contract
@@ -135,6 +145,9 @@ async def generate_and_push_report(ib):
 
             positions.append({
                 'symbol': symbol,
+                'name': name,
+                'sector': sector,
+                'currency': currency,
                 'quantity': qty,
                 'avg_cost': avg_cost,
                 'market_price': price,
