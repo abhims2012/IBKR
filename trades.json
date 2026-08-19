@@ -98,5 +98,15 @@
         "rsi": 19.509489053509853,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 19.51",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-08-19 10:28:46",
+        "symbol": "S32",
+        "action": "BUY",
+        "price": 4.73,
+        "sma": 4.378800000000001,
+        "rsi": 29.0098631033308,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.01",
+        "currency": "AUD"
     }
 ]
