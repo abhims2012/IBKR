@@ -12,9 +12,10 @@ def get_meta(symbol, meta_data):
     return meta_data.get(symbol, {'name': symbol, 'sector': 'Unknown'})
 
 async def generate_and_push_report(ib):
+    print("Starting generation...")
     DIR = os.path.dirname(os.path.abspath(__file__))
     
-    # 1. Load Metadata
+    print("1. Load Metadata")
     meta_data = {}
     try:
         with open(os.path.join(DIR, 'company_meta.json'), 'r', encoding='utf-8') as f:
@@ -22,7 +23,7 @@ async def generate_and_push_report(ib):
     except:
         pass
         
-    # 2. Load History
+    print("2. Load History")
     history = []
     trades_path = os.path.join(DIR, 'trades.json')
     if os.path.exists(trades_path):
@@ -36,7 +37,7 @@ async def generate_and_push_report(ib):
         except Exception as e:
             print(f"Error loading trades.json: {e}")
 
-    # 3. PnL
+    print("3. PnL")
     accounts = ib.managedAccounts()
     account = accounts[0] if accounts else ''
     pnl = ib.reqPnL(account, '')
@@ -47,9 +48,10 @@ async def generate_and_push_report(ib):
     if realized_pnl is None or pd.isna(realized_pnl): realized_pnl = 0.0
     ib.cancelPnL(account, '')
 
-    # 4. Positions
+    print("4. Positions")
     positions = []
     for pos in ib.positions():
+        print(f"Processing position: {pos.contract.symbol}")
         try:
             symbol = pos.contract.symbol
             qty = pos.position
@@ -61,8 +63,9 @@ async def generate_and_push_report(ib):
             
             contract = pos.contract
             try:
-                await ib.qualifyContractsAsync(contract)
-            except:
+                await asyncio.wait_for(ib.qualifyContractsAsync(contract), timeout=5.0)
+            except Exception as e:
+                print(f"Qualify timeout: {e}")
                 pass
             
             ib.reqMarketDataType(3) 
@@ -88,8 +91,10 @@ async def generate_and_push_report(ib):
                     break
                     
             if not rationale:
+                print(f"Skipping {symbol} (no rationale)")
                 continue
                     
+            print(f"Fetching historical data for {symbol}...")
             try:
                 bars = await asyncio.wait_for(ib.reqHistoricalDataAsync(
                     contract, endDateTime='', durationStr='60 D', barSizeSetting='1 day',
@@ -142,7 +147,7 @@ async def generate_and_push_report(ib):
         
     bot_unrealized_pnl = sum(pos['unrealized_pnl'] for pos in positions)
     
-    # 5. Render
+    print("5. Render")
     env = Environment(loader=FileSystemLoader(DIR))
     template = env.get_template('template.html')
     
@@ -171,8 +176,9 @@ async def generate_and_push_report(ib):
 if __name__ == '__main__':
     from ib_async import IB
     ib = IB()
+    import random
     try:
-        ib.connect('127.0.0.1', 7497, clientId=999)
+        ib.connect('127.0.0.1', 7497, clientId=random.randint(2000, 9000))
         asyncio.run(generate_and_push_report(ib))
     finally:
         ib.disconnect()
