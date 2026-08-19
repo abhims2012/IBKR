@@ -90,10 +90,14 @@ async def generate_and_push_report(ib):
             if not rationale:
                 continue
                     
-            bars = await ib.reqHistoricalDataAsync(
-                contract, endDateTime='', durationStr='60 D', barSizeSetting='1 day',
-                whatToShow='TRADES', useRTH=True, formatDate=1
-            )
+            try:
+                bars = await asyncio.wait_for(ib.reqHistoricalDataAsync(
+                    contract, endDateTime='', durationStr='60 D', barSizeSetting='1 day',
+                    whatToShow='TRADES', useRTH=True, formatDate=1
+                ), timeout=15.0)
+            except asyncio.TimeoutError:
+                print(f"Timeout getting historical data for {symbol} chart")
+                bars = []
             
             chart_json = "{}"
             if bars:
