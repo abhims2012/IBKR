@@ -118,5 +118,15 @@
         "rsi": 27.62014041904554,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 27.62",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-08-19 12:31:49",
+        "symbol": "SEK",
+        "action": "BUY",
+        "price": 14.36,
+        "sma": 13.9192,
+        "rsi": 28.28844300513235,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.29",
+        "currency": "AUD"
     }
 ]
