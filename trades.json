@@ -128,5 +128,15 @@
         "rsi": 28.28844300513235,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.29",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-08-20 00:07:46",
+        "symbol": "NVDA",
+        "action": "BUY",
+        "price": 218.09,
+        "sma": 207.13099999999997,
+        "rsi": 29.629984570116775,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.63",
+        "currency": "USD"
     }
 ]
