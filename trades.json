@@ -78,5 +78,25 @@
         "rsi": 0,
         "rationale": "Manual Test Trade to verify US routing",
         "currency": "USD"
+    },
+    {
+        "date": "2026-08-19 10:22:02",
+        "symbol": "MIN",
+        "action": "BUY",
+        "price": 63.87,
+        "sma": 62.0518,
+        "rsi": 29.642265484673004,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.64",
+        "currency": "AUD"
+    },
+    {
+        "date": "2026-08-19 10:22:22",
+        "symbol": "NST",
+        "action": "BUY",
+        "price": 21.92,
+        "sma": 20.7514,
+        "rsi": 19.509489053509853,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 19.51",
+        "currency": "AUD"
     }
 ]
