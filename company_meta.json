@@ -1,0 +1,402 @@
+{
+    "AAPL": {
+        "name": "Apple Inc.",
+        "sector": "Technology"
+    },
+    "MSFT": {
+        "name": "Microsoft Corporation",
+        "sector": "Technology"
+    },
+    "NVDA": {
+        "name": "NVIDIA Corporation",
+        "sector": "Technology"
+    },
+    "AMZN": {
+        "name": "Amazon.com, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "META": {
+        "name": "Meta Platforms, Inc.",
+        "sector": "Communication Services"
+    },
+    "GOOGL": {
+        "name": "Alphabet Inc.",
+        "sector": "Communication Services"
+    },
+    "TSLA": {
+        "name": "Tesla, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "BRK.B": {
+        "name": "BRK.B",
+        "sector": "Unknown"
+    },
+    "AVGO": {
+        "name": "Broadcom Inc.",
+        "sector": "Technology"
+    },
+    "JPM": {
+        "name": "JP Morgan Chase & Co.",
+        "sector": "Financial Services"
+    },
+    "UNH": {
+        "name": "UnitedHealth Group Incorporated",
+        "sector": "Healthcare"
+    },
+    "LLY": {
+        "name": "Eli Lilly and Company",
+        "sector": "Healthcare"
+    },
+    "V": {
+        "name": "Visa Inc.",
+        "sector": "Financial Services"
+    },
+    "XOM": {
+        "name": "ExxonMobil Holdings Corporation",
+        "sector": "Energy"
+    },
+    "JNJ": {
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare"
+    },
+    "PG": {
+        "name": "Procter & Gamble Company (The)",
+        "sector": "Consumer Defensive"
+    },
+    "MA": {
+        "name": "Mastercard Incorporated",
+        "sector": "Financial Services"
+    },
+    "HD": {
+        "name": "Home Depot, Inc. (The)",
+        "sector": "Consumer Cyclical"
+    },
+    "CVX": {
+        "name": "Chevron Corporation",
+        "sector": "Energy"
+    },
+    "MRK": {
+        "name": "Merck & Company, Inc.",
+        "sector": "Healthcare"
+    },
+    "ABBV": {
+        "name": "AbbVie Inc.",
+        "sector": "Healthcare"
+    },
+    "PEP": {
+        "name": "Pepsico, Inc.",
+        "sector": "Consumer Defensive"
+    },
+    "COST": {
+        "name": "Costco Wholesale Corporation",
+        "sector": "Consumer Defensive"
+    },
+    "KO": {
+        "name": "Coca-Cola Company (The)",
+        "sector": "Consumer Defensive"
+    },
+    "ADBE": {
+        "name": "Adobe Inc.",
+        "sector": "Technology"
+    },
+    "WMT": {
+        "name": "Walmart Inc.",
+        "sector": "Consumer Defensive"
+    },
+    "MCD": {
+        "name": "McDonald's Corporation",
+        "sector": "Consumer Cyclical"
+    },
+    "CRM": {
+        "name": "Salesforce, Inc.",
+        "sector": "Technology"
+    },
+    "TMO": {
+        "name": "Thermo Fisher Scientific Inc",
+        "sector": "Healthcare"
+    },
+    "CSCO": {
+        "name": "Cisco Systems, Inc.",
+        "sector": "Technology"
+    },
+    "ACN": {
+        "name": "Accenture plc",
+        "sector": "Technology"
+    },
+    "BAC": {
+        "name": "Bank of America Corporation",
+        "sector": "Financial Services"
+    },
+    "NFLX": {
+        "name": "Netflix, Inc.",
+        "sector": "Communication Services"
+    },
+    "LIN": {
+        "name": "Linde plc",
+        "sector": "Basic Materials"
+    },
+    "AMD": {
+        "name": "Advanced Micro Devices, Inc.",
+        "sector": "Technology"
+    },
+    "CMCSA": {
+        "name": "Comcast Corporation",
+        "sector": "Communication Services"
+    },
+    "INTC": {
+        "name": "Intel Corporation",
+        "sector": "Technology"
+    },
+    "ABT": {
+        "name": "Abbott Laboratories",
+        "sector": "Healthcare"
+    },
+    "ORCL": {
+        "name": "Oracle Corporation",
+        "sector": "Technology"
+    },
+    "DHR": {
+        "name": "Danaher Corporation",
+        "sector": "Healthcare"
+    },
+    "PFE": {
+        "name": "Pfizer, Inc.",
+        "sector": "Healthcare"
+    },
+    "WFC": {
+        "name": "Wells Fargo & Company",
+        "sector": "Financial Services"
+    },
+    "TXN": {
+        "name": "Texas Instruments Incorporated",
+        "sector": "Technology"
+    },
+    "DIS": {
+        "name": "Walt Disney Company (The)",
+        "sector": "Communication Services"
+    },
+    "PM": {
+        "name": "Philip Morris International Inc",
+        "sector": "Consumer Defensive"
+    },
+    "COP": {
+        "name": "ConocoPhillips",
+        "sector": "Energy"
+    },
+    "VZ": {
+        "name": "Verizon Communications Inc.",
+        "sector": "Communication Services"
+    },
+    "NEE": {
+        "name": "NextEra Energy, Inc.",
+        "sector": "Utilities"
+    },
+    "INTU": {
+        "name": "Intuit Inc.",
+        "sector": "Technology"
+    },
+    "QCOM": {
+        "name": "QUALCOMM Incorporated",
+        "sector": "Technology"
+    },
+    "BHP": {
+        "name": "BHP GROUP FPO [BHP]",
+        "sector": "Basic Materials"
+    },
+    "CBA": {
+        "name": "CWLTH BANK FPO [CBA]",
+        "sector": "Financial Services"
+    },
+    "CSL": {
+        "name": "CSL FPO [CSL]",
+        "sector": "Healthcare"
+    },
+    "NAB": {
+        "name": "NAT. BANK FPO [NAB]",
+        "sector": "Financial Services"
+    },
+    "WBC": {
+        "name": "WESTPAC FPO [WBC]",
+        "sector": "Financial Services"
+    },
+    "ANZ": {
+        "name": "ANZ GROUP FPO [ANZ]",
+        "sector": "Financial Services"
+    },
+    "MQG": {
+        "name": "MACQ GROUP FPO [MQG]",
+        "sector": "Financial Services"
+    },
+    "WES": {
+        "name": "WESFARMER FPO [WES]",
+        "sector": "Consumer Cyclical"
+    },
+    "TLS": {
+        "name": "TELSTRA FPO [TLS]",
+        "sector": "Communication Services"
+    },
+    "RIO": {
+        "name": "RIO TINTO FPO [RIO]",
+        "sector": "Basic Materials"
+    },
+    "GMG": {
+        "name": "GOOD GROUP STAPLED [GMG]",
+        "sector": "Real Estate"
+    },
+    "TCL": {
+        "name": "TRANSURBAN STAPLED [TCL]",
+        "sector": "Industrials"
+    },
+    "FMG": {
+        "name": "FORTESCUE FPO [FMG]",
+        "sector": "Basic Materials"
+    },
+    "WOW": {
+        "name": "WOOLWORTHS FPO [WOW]",
+        "sector": "Consumer Defensive"
+    },
+    "COL": {
+        "name": "COLESGROUP FPO [COL]",
+        "sector": "Consumer Defensive"
+    },
+    "STO": {
+        "name": "SANTOS FPO [STO]",
+        "sector": "Energy"
+    },
+    "WDS": {
+        "name": "WOODSIDE FPO [WDS]",
+        "sector": "Energy"
+    },
+    "ALL": {
+        "name": "ARISTOCRAT FPO [ALL]",
+        "sector": "Consumer Cyclical"
+    },
+    "QBE": {
+        "name": "QBE INSUR. FPO [QBE]",
+        "sector": "Financial Services"
+    },
+    "SCG": {
+        "name": "SCENTRE STAPLED [SCG]",
+        "sector": "Real Estate"
+    },
+    "BXB": {
+        "name": "BRAMB LTD FPO [BXB]",
+        "sector": "Industrials"
+    },
+    "NCM": {
+        "name": "NCM",
+        "sector": "Unknown"
+    },
+    "COH": {
+        "name": "COCHLEAR FPO [COH]",
+        "sector": "Healthcare"
+    },
+    "SUN": {
+        "name": "SUNCORP FPO [SUN]",
+        "sector": "Financial Services"
+    },
+    "MIN": {
+        "name": "MINERALRES FPO [MIN]",
+        "sector": "Basic Materials"
+    },
+    "RMD": {
+        "name": "RESMED CDI 10:1 [RMD]",
+        "sector": "Healthcare"
+    },
+    "REA": {
+        "name": "REA GROUP FPO [REA]",
+        "sector": "Communication Services"
+    },
+    "AMC": {
+        "name": "AMCOR PLC CDI 1:1 [AMC]",
+        "sector": "Consumer Cyclical"
+    },
+    "SHL": {
+        "name": "SONIC HLTH FPO [SHL]",
+        "sector": "Healthcare"
+    },
+    "S32": {
+        "name": "SOUTH32 FPO [S32]",
+        "sector": "Basic Materials"
+    },
+    "SGP": {
+        "name": "STOCKLAND. STAPLED [SGP]",
+        "sector": "Real Estate"
+    },
+    "PLS": {
+        "name": "PLSGROUP FPO [PLS]",
+        "sector": "Basic Materials"
+    },
+    "IAG": {
+        "name": "INSUR.AUST FPO [IAG]",
+        "sector": "Financial Services"
+    },
+    "CPU": {
+        "name": "CSHARE FPO [CPU]",
+        "sector": "Financial Services"
+    },
+    "NST": {
+        "name": "NTH STAR FPO [NST]",
+        "sector": "Basic Materials"
+    },
+    "BSL": {
+        "name": "BLUESCOPE FPO [BSL]",
+        "sector": "Basic Materials"
+    },
+    "XRO": {
+        "name": "XERO FPO [XRO]",
+        "sector": "Technology"
+    },
+    "ORG": {
+        "name": "ORIGIN ENE FPO [ORG]",
+        "sector": "Utilities"
+    },
+    "FPH": {
+        "name": "F&P HEALTH FPO NZX [FPH]",
+        "sector": "Healthcare"
+    },
+    "VCX": {
+        "name": "VICINITY STAPLED [VCX]",
+        "sector": "Real Estate"
+    },
+    "APA": {
+        "name": "APA GROUP STAPLED [APA]",
+        "sector": "Utilities"
+    },
+    "TRE": {
+        "name": "TOUBANI FPO [TRE]",
+        "sector": "Basic Materials"
+    },
+    "ASX": {
+        "name": "ASX FPO [ASX]",
+        "sector": "Financial Services"
+    },
+    "SEK": {
+        "name": "SEEK FPO [SEK]",
+        "sector": "Communication Services"
+    },
+    "SVW": {
+        "name": "SVW",
+        "sector": "Unknown"
+    },
+    "ALX": {
+        "name": "ATLSRTERIA FPOSFORUS [ALX]",
+        "sector": "Industrials"
+    },
+    "CAR": {
+        "name": "CAR GROUP FPO [CAR]",
+        "sector": "Communication Services"
+    },
+    "TWE": {
+        "name": "TREA WINE FPO [TWE]",
+        "sector": "Consumer Defensive"
+    },
+    "GPT": {
+        "name": "GPT STAPLED [GPT]",
+        "sector": "Real Estate"
+    },
+    "AWC": {
+        "name": "AWC",
+        "sector": "Unknown"
+    }
+}

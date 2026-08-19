@@ -8,6 +8,13 @@ from jinja2 import Environment, FileSystemLoader
 from ib_async import Stock, util
 
 async def generate_and_push_report(ib):
+    # Load company metadata
+    meta_data = {}
+    try:
+        with open(os.path.join(DIR, 'company_meta.json'), 'r') as f:
+            meta_data = json.load(f)
+    except:
+        pass
     # Load history
     DIR = os.path.dirname(os.path.abspath(__file__))
     trades_path = os.path.join(DIR, 'trades.json')
