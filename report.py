@@ -4,6 +4,7 @@ import datetime
 import pytz
 import subprocess
 import pandas as pd
+import asyncio
 from jinja2 import Environment, FileSystemLoader
 from ib_async import Stock, util
 
@@ -16,7 +17,7 @@ async def generate_and_push_report(ib):
     # 1. Load Metadata
     meta_data = {}
     try:
-        with open(os.path.join(DIR, 'company_meta.json'), 'r') as f:
+        with open(os.path.join(DIR, 'company_meta.json'), 'r', encoding='utf-8') as f:
             meta_data = json.load(f)
     except:
         pass
@@ -26,7 +27,7 @@ async def generate_and_push_report(ib):
     trades_path = os.path.join(DIR, 'trades.json')
     if os.path.exists(trades_path):
         try:
-            with open(trades_path, 'r') as f:
+            with open(trades_path, 'r', encoding='utf-8') as f:
                 history = json.load(f)
                 for t in history:
                     cm = get_meta(t['symbol'], meta_data)
@@ -39,7 +40,6 @@ async def generate_and_push_report(ib):
     accounts = ib.managedAccounts()
     account = accounts[0] if accounts else ''
     pnl = ib.reqPnL(account, '')
-    import asyncio
     await asyncio.sleep(2)
     unrealized_pnl = getattr(pnl, 'unrealizedPnL', 0.0)
     realized_pnl = getattr(pnl, 'realizedPnL', 0.0)
