@@ -398,5 +398,441 @@
     "AWC": {
         "name": "AWC",
         "sector": "Unknown"
+    },
+    "BRK B": {
+        "name": "BRK B",
+        "sector": "Unknown"
+    },
+    "IBM": {
+        "name": "International Business Machines",
+        "sector": "Technology"
+    },
+    "AMGN": {
+        "name": "Amgen Inc.",
+        "sector": "Healthcare"
+    },
+    "SPY": {
+        "name": "State Street SPDR S&P 500 ETF T",
+        "sector": "Unknown"
+    },
+    "QQQ": {
+        "name": "Invesco QQQ Trust, Series 1",
+        "sector": "Unknown"
+    },
+    "DIA": {
+        "name": "State Street SPDR Dow Jones Ind",
+        "sector": "Unknown"
+    },
+    "BA": {
+        "name": "Boeing Company (The)",
+        "sector": "Industrials"
+    },
+    "HON": {
+        "name": "Honeywell International Inc.",
+        "sector": "Industrials"
+    },
+    "UNP": {
+        "name": "Union Pacific Corporation",
+        "sector": "Industrials"
+    },
+    "GE": {
+        "name": "GE Aerospace",
+        "sector": "Industrials"
+    },
+    "RTX": {
+        "name": "RTX Corporation",
+        "sector": "Industrials"
+    },
+    "CAT": {
+        "name": "Caterpillar, Inc.",
+        "sector": "Industrials"
+    },
+    "UPS": {
+        "name": "United Parcel Service, Inc.",
+        "sector": "Industrials"
+    },
+    "LMT": {
+        "name": "Lockheed Martin Corporation",
+        "sector": "Industrials"
+    },
+    "DE": {
+        "name": "Deere & Company",
+        "sector": "Industrials"
+    },
+    "MMM": {
+        "name": "3M Company",
+        "sector": "Industrials"
+    },
+    "GS": {
+        "name": "Goldman Sachs Group, Inc. (The)",
+        "sector": "Financial Services"
+    },
+    "MS": {
+        "name": "Morgan Stanley",
+        "sector": "Financial Services"
+    },
+    "BLK": {
+        "name": "BlackRock, Inc.",
+        "sector": "Financial Services"
+    },
+    "C": {
+        "name": "Citigroup, Inc.",
+        "sector": "Financial Services"
+    },
+    "AXP": {
+        "name": "American Express Company",
+        "sector": "Financial Services"
+    },
+    "T": {
+        "name": "AT&T Inc.",
+        "sector": "Communication Services"
+    },
+    "TMUS": {
+        "name": "T-Mobile US, Inc.",
+        "sector": "Communication Services"
+    },
+    "CHTR": {
+        "name": "Charter Communications, Inc.",
+        "sector": "Communication Services"
+    },
+    "NKE": {
+        "name": "Nike, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "SBUX": {
+        "name": "Starbucks Corporation",
+        "sector": "Consumer Cyclical"
+    },
+    "BKNG": {
+        "name": "Booking Holdings Inc. Common St",
+        "sector": "Consumer Cyclical"
+    },
+    "TJX": {
+        "name": "TJX Companies, Inc. (The)",
+        "sector": "Consumer Cyclical"
+    },
+    "TGT": {
+        "name": "Target Corporation",
+        "sector": "Consumer Defensive"
+    },
+    "LOW": {
+        "name": "Lowe's Companies, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "SYY": {
+        "name": "Sysco Corporation",
+        "sector": "Consumer Defensive"
+    },
+    "CVS": {
+        "name": "CVS Health Corporation",
+        "sector": "Healthcare"
+    },
+    "CI": {
+        "name": "The Cigna Group",
+        "sector": "Healthcare"
+    },
+    "ISRG": {
+        "name": "Intuitive Surgical, Inc.",
+        "sector": "Healthcare"
+    },
+    "SYK": {
+        "name": "Stryker Corporation",
+        "sector": "Healthcare"
+    },
+    "MDT": {
+        "name": "Medtronic plc.",
+        "sector": "Healthcare"
+    },
+    "GILD": {
+        "name": "Gilead Sciences, Inc.",
+        "sector": "Healthcare"
+    },
+    "VRTX": {
+        "name": "Vertex Pharmaceuticals Incorpor",
+        "sector": "Healthcare"
+    },
+    "REGN": {
+        "name": "Regeneron Pharmaceuticals, Inc.",
+        "sector": "Healthcare"
+    },
+    "ZTS": {
+        "name": "Zoetis Inc.",
+        "sector": "Healthcare"
+    },
+    "BDX": {
+        "name": "Becton, Dickinson and Company",
+        "sector": "Healthcare"
+    },
+    "BSX": {
+        "name": "Boston Scientific Corporation",
+        "sector": "Healthcare"
+    },
+    "EW": {
+        "name": "Edwards Lifesciences Corporatio",
+        "sector": "Healthcare"
+    },
+    "ILMN": {
+        "name": "Illumina, Inc.",
+        "sector": "Healthcare"
+    },
+    "ALGN": {
+        "name": "Align Technology, Inc.",
+        "sector": "Healthcare"
+    },
+    "IDXX": {
+        "name": "IDEXX Laboratories, Inc.",
+        "sector": "Healthcare"
+    },
+    "A": {
+        "name": "Agilent Technologies, Inc.",
+        "sector": "Healthcare"
+    },
+    "MTD": {
+        "name": "Mettler-Toledo International, I",
+        "sector": "Healthcare"
+    },
+    "WAT": {
+        "name": "Waters Corporation",
+        "sector": "Healthcare"
+    },
+    "PKI": {
+        "name": "PKI",
+        "sector": "Unknown"
+    },
+    "IQV": {
+        "name": "IQVIA Holdings, Inc.",
+        "sector": "Healthcare"
+    },
+    "CRL": {
+        "name": "Charles River Laboratories Inte",
+        "sector": "Healthcare"
+    },
+    "DXCM": {
+        "name": "DexCom, Inc.",
+        "sector": "Healthcare"
+    },
+    "PODD": {
+        "name": "Insulet Corporation",
+        "sector": "Healthcare"
+    },
+    "TFX": {
+        "name": "Teleflex Incorporated",
+        "sector": "Healthcare"
+    },
+    "COO": {
+        "name": "The Cooper Companies, Inc.",
+        "sector": "Healthcare"
+    },
+    "HOLX": {
+        "name": "HOLX",
+        "sector": "Unknown"
+    },
+    "STE": {
+        "name": "STERIS plc (Ireland)",
+        "sector": "Healthcare"
+    },
+    "XRAY": {
+        "name": "DENTSPLY SIRONA Inc.",
+        "sector": "Healthcare"
+    },
+    "HSIC": {
+        "name": "Henry Schein, Inc.",
+        "sector": "Healthcare"
+    },
+    "PDCO": {
+        "name": "PDCO",
+        "sector": "Unknown"
+    },
+    "CYH": {
+        "name": "Community Health Systems, Inc.",
+        "sector": "Healthcare"
+    },
+    "UHS": {
+        "name": "Universal Health Services, Inc.",
+        "sector": "Healthcare"
+    },
+    "THC": {
+        "name": "Tenet Healthcare Corporation",
+        "sector": "Healthcare"
+    },
+    "HCA": {
+        "name": "HCA Healthcare, Inc.",
+        "sector": "Healthcare"
+    },
+    "CAH": {
+        "name": "Cardinal Health, Inc.",
+        "sector": "Healthcare"
+    },
+    "MCK": {
+        "name": "McKesson Corporation",
+        "sector": "Healthcare"
+    },
+    "ABC": {
+        "name": "ABC",
+        "sector": "Unknown"
+    },
+    "CNC": {
+        "name": "Centene Corporation",
+        "sector": "Healthcare"
+    },
+    "MOH": {
+        "name": "Molina Healthcare Inc",
+        "sector": "Healthcare"
+    },
+    "HUM": {
+        "name": "Humana Inc.",
+        "sector": "Healthcare"
+    },
+    "WBA": {
+        "name": "WBA",
+        "sector": "Unknown"
+    },
+    "RAD": {
+        "name": "RAD",
+        "sector": "Unknown"
+    },
+    "GPC": {
+        "name": "Genuine Parts Company",
+        "sector": "Consumer Cyclical"
+    },
+    "ORLY": {
+        "name": "O'Reilly Automotive, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "AZO": {
+        "name": "AutoZone, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "AAP": {
+        "name": "Advance Auto Parts Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "TSCO": {
+        "name": "Tractor Supply Company",
+        "sector": "Consumer Cyclical"
+    },
+    "FND": {
+        "name": "Floor & Decor Holdings, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "F": {
+        "name": "Ford Motor Company",
+        "sector": "Consumer Cyclical"
+    },
+    "GM": {
+        "name": "General Motors Company",
+        "sector": "Consumer Cyclical"
+    },
+    "HMC": {
+        "name": "Honda Motor Company, Ltd.",
+        "sector": "Consumer Cyclical"
+    },
+    "TM": {
+        "name": "Toyota Motor Corporation",
+        "sector": "Consumer Cyclical"
+    },
+    "TTM": {
+        "name": "TTM",
+        "sector": "Unknown"
+    },
+    "STLA": {
+        "name": "Stellantis N.V.",
+        "sector": "Consumer Cyclical"
+    },
+    "RACE": {
+        "name": "Ferrari N.V.",
+        "sector": "Consumer Cyclical"
+    },
+    "HOG": {
+        "name": "Harley-Davidson, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "PII": {
+        "name": "Polaris Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "THO": {
+        "name": "Thor Industries, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "WGO": {
+        "name": "Winnebago Industries, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "LCII": {
+        "name": "LCI Industries",
+        "sector": "Consumer Cyclical"
+    },
+    "PATK": {
+        "name": "Patrick Industries, Inc.",
+        "sector": "Consumer Cyclical"
+    },
+    "SNDR": {
+        "name": "Schneider National, Inc.",
+        "sector": "Industrials"
+    },
+    "KNX": {
+        "name": "Knight-Swift Transportation Hol",
+        "sector": "Industrials"
+    },
+    "JBHT": {
+        "name": "J.B. Hunt Transport Services, I",
+        "sector": "Industrials"
+    },
+    "ODFL": {
+        "name": "Old Dominion Freight Line, Inc.",
+        "sector": "Industrials"
+    },
+    "SAIA": {
+        "name": "Saia, Inc.",
+        "sector": "Industrials"
+    },
+    "ARCB": {
+        "name": "ArcBest Corporation",
+        "sector": "Industrials"
+    },
+    "YRCW": {
+        "name": "YRCW",
+        "sector": "Unknown"
+    },
+    "XPO": {
+        "name": "XPO, Inc.",
+        "sector": "Industrials"
+    },
+    "CHRW": {
+        "name": "C.H. Robinson Worldwide, Inc.",
+        "sector": "Industrials"
+    },
+    "EXPD": {
+        "name": "Expeditors International of Was",
+        "sector": "Industrials"
+    },
+    "LSTR": {
+        "name": "Landstar System, Inc.",
+        "sector": "Industrials"
+    },
+    "RXO": {
+        "name": "RXO, Inc.",
+        "sector": "Industrials"
+    },
+    "GXO": {
+        "name": "GXO Logistics, Inc.",
+        "sector": "Industrials"
+    },
+    "HUBG": {
+        "name": "Hub Group, Inc.",
+        "sector": "Industrials"
+    },
+    "CSX": {
+        "name": "CSX Corporation",
+        "sector": "Industrials"
+    },
+    "NSC": {
+        "name": "Norfolk Southern Corporation",
+        "sector": "Industrials"
+    },
+    "CP": {
+        "name": "Canadian Pacific Kansas City Li",
+        "sector": "Industrials"
     }
 }
