@@ -368,5 +368,45 @@
         "rsi": 14.046156456778405,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 14.05",
         "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 21:51:07",
+        "symbol": "TSCO",
+        "action": "BUY",
+        "price": 34.74,
+        "sma": 31.8988,
+        "rsi": 29.893966642380462,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.89",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 21:51:19",
+        "symbol": "HMC",
+        "action": "BUY",
+        "price": 33.02,
+        "sma": 29.036200000000004,
+        "rsi": 14.046156456778405,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 14.05",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 22:01:33",
+        "symbol": "TSCO",
+        "action": "BUY",
+        "price": 34.74,
+        "sma": 31.8988,
+        "rsi": 29.893966642380462,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.89",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 22:01:45",
+        "symbol": "HMC",
+        "action": "BUY",
+        "price": 33.02,
+        "sma": 29.036200000000004,
+        "rsi": 14.046156456778405,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 14.05",
+        "currency": "USD"
     }
 ]
