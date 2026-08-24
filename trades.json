@@ -258,5 +258,45 @@
         "rsi": 26.92714016754738,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.93",
         "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 18:17:10",
+        "symbol": "MMM",
+        "action": "BUY",
+        "price": 176.77,
+        "sma": 169.52779999999998,
+        "rsi": 21.14554576150438,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 21.15",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 18:19:37",
+        "symbol": "RACE",
+        "action": "BUY",
+        "price": 431.51,
+        "sma": 384.939,
+        "rsi": 19.25035954014686,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 19.25",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 18:27:31",
+        "symbol": "MMM",
+        "action": "BUY",
+        "price": 176.77,
+        "sma": 169.52779999999998,
+        "rsi": 21.14554576150438,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 21.15",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 18:29:55",
+        "symbol": "RACE",
+        "action": "BUY",
+        "price": 431.51,
+        "sma": 384.9314,
+        "rsi": 18.02589402520138,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 18.03",
+        "currency": "USD"
     }
 ]
