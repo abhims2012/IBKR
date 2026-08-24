@@ -448,5 +448,15 @@
         "rsi": 14.046156456778405,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 14.05",
         "currency": "USD"
+    },
+    {
+        "date": "2026-08-24 22:30:29",
+        "symbol": "COP",
+        "action": "BUY",
+        "price": 134.0,
+        "sma": 116.18,
+        "rsi": 26.426285770546585,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.43",
+        "currency": "USD"
     }
 ]
