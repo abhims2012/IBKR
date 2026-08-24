@@ -49,17 +49,18 @@ def is_market_open(currency, current_time_aest):
     day_of_week = current_time_aest.weekday() # 0 = Monday, 6 = Sunday
     
     if currency == 'USD':
-        # US Market in AEST: Monday 23:30 to Saturday 07:00
-        start = datetime.time(23, 30)
-        end = datetime.time(7, 0)
+        # US Market Extended Hours (Pre-market to After-hours): 4:00 AM EST to 8:00 PM EST
+        # In AEST, this is approximately Monday 18:00 to Saturday 10:00
+        start = datetime.time(18, 0)
+        end = datetime.time(10, 0)
         
-        # Tuesday(1) through Friday(4): Open early morning AND late night
+        # Tuesday(1) through Friday(4): Open 24 hours essentially (between the daily gaps)
         if day_of_week in [1, 2, 3, 4]:
-            return time_only >= start or time_only <= end
-        # Monday(0): Only open late night
+            return True
+        # Monday(0): Opens in the evening AEST (18:00)
         elif day_of_week == 0:
             return time_only >= start
-        # Saturday(5): Only open early morning (wrapping up Friday US session)
+        # Saturday(5): Closes in the morning AEST (10:00)
         elif day_of_week == 5:
             return time_only <= end
         else:
@@ -94,7 +95,7 @@ async def is_sniper_setup(ib, contract):
                 durationStr='100 D', # 100 days
                 barSizeSetting='1 day',
                 whatToShow='TRADES',
-                useRTH=True,
+                useRTH=False,
                 formatDate=1
             ),
             timeout=15.0
@@ -121,7 +122,7 @@ async def is_sniper_setup(ib, contract):
                 durationStr='10 D',
                 barSizeSetting='15 mins',
                 whatToShow='TRADES',
-                useRTH=True,
+                useRTH=False,
                 formatDate=1
             ),
             timeout=15.0
