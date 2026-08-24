@@ -208,5 +208,35 @@
         "rsi": 26.436576729202557,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.44",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-08-24 14:57:17",
+        "symbol": "RMD",
+        "action": "BUY",
+        "price": 31.79,
+        "sma": 29.511999999999997,
+        "rsi": 24.307571318713514,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 24.31",
+        "currency": "AUD"
+    },
+    {
+        "date": "2026-08-24 15:03:26",
+        "symbol": "RMD",
+        "action": "BUY",
+        "price": 31.74,
+        "sma": 29.5114,
+        "rsi": 23.187177548512167,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 23.19",
+        "currency": "AUD"
+    },
+    {
+        "date": "2026-08-24 15:09:35",
+        "symbol": "RMD",
+        "action": "BUY",
+        "price": 31.705,
+        "sma": 29.5124,
+        "rsi": 26.009893650000066,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.01",
+        "currency": "AUD"
     }
 ]
