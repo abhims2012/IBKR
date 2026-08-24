@@ -238,5 +238,15 @@
         "rsi": 26.009893650000066,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.01",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-08-24 15:15:57",
+        "symbol": "RMD",
+        "action": "BUY",
+        "price": 31.76,
+        "sma": 29.5128,
+        "rsi": 28.48765514240843,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.49",
+        "currency": "AUD"
     }
 ]
