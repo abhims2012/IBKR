@@ -548,5 +548,45 @@
         "rsi": 24.159043152944363,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 24.16",
         "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 21:10:41",
+        "symbol": "JNJ",
+        "action": "BUY",
+        "price": 268.0,
+        "sma": 256.222,
+        "rsi": 12.951969077798964,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 12.95",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 21:11:13",
+        "symbol": "CRM",
+        "action": "BUY",
+        "price": 207.0,
+        "sma": 176.00740000000002,
+        "rsi": 24.159043152944363,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 24.16",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 21:21:14",
+        "symbol": "JNJ",
+        "action": "BUY",
+        "price": 268.0,
+        "sma": 256.222,
+        "rsi": 12.951969077798964,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 12.95",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 21:24:52",
+        "symbol": "HCA",
+        "action": "BUY",
+        "price": 428.0,
+        "sma": 398.23839999999996,
+        "rsi": 20.16680016596706,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 20.17",
+        "currency": "USD"
     }
 ]
