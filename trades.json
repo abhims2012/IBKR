@@ -458,5 +458,95 @@
         "rsi": 26.426285770546585,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.43",
         "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:46:15",
+        "symbol": "XOM",
+        "action": "BUY",
+        "price": 161.99,
+        "sma": 149.8156,
+        "rsi": 28.428293837899986,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.43",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:46:21",
+        "symbol": "JNJ",
+        "action": "BUY",
+        "price": 268.0,
+        "sma": 256.222,
+        "rsi": 12.951969077798964,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 12.95",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:46:36",
+        "symbol": "CVX",
+        "action": "BUY",
+        "price": 201.05,
+        "sma": 186.52059999999997,
+        "rsi": 15.770076333922532,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 15.77",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:47:10",
+        "symbol": "CRM",
+        "action": "BUY",
+        "price": 207.0,
+        "sma": 176.00740000000002,
+        "rsi": 24.159043152944363,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 24.16",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:47:44",
+        "symbol": "ABT",
+        "action": "BUY",
+        "price": 116.325,
+        "sma": 100.4518,
+        "rsi": 26.598223761476007,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.60",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:52:39",
+        "symbol": "TM",
+        "action": "BUY",
+        "price": 195.06,
+        "sma": 181.1762,
+        "rsi": 27.11460277862794,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 27.11",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:59:21",
+        "symbol": "XOM",
+        "action": "BUY",
+        "price": 161.99,
+        "sma": 149.8156,
+        "rsi": 28.428293837899986,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.43",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:59:25",
+        "symbol": "JNJ",
+        "action": "BUY",
+        "price": 268.0,
+        "sma": 256.222,
+        "rsi": 12.951969077798964,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 12.95",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-08-25 20:59:58",
+        "symbol": "CRM",
+        "action": "BUY",
+        "price": 207.0,
+        "sma": 176.00740000000002,
+        "rsi": 24.159043152944363,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 24.16",
+        "currency": "USD"
     }
 ]
