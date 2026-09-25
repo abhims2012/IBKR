@@ -588,5 +588,15 @@
         "rsi": 20.16680016596706,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 20.17",
         "currency": "USD"
+    },
+    {
+        "date": "2026-09-25 14:52:23",
+        "symbol": "CSL",
+        "action": "BUY",
+        "price": 176.33,
+        "sma": 153.8182,
+        "rsi": 27.996227416322583,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.00",
+        "currency": "AUD"
     }
 ]
