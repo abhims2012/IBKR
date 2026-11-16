@@ -598,5 +598,45 @@
         "rsi": 27.996227416322583,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.00",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-10-22 21:59:22",
+        "symbol": "TJX",
+        "action": "BUY",
+        "price": 145.32,
+        "sma": 136.69199999999998,
+        "rsi": 27.90702109614955,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 27.91",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-10-22 22:00:25",
+        "symbol": "ILMN",
+        "action": "BUY",
+        "price": 275.3,
+        "sma": 240.71,
+        "rsi": 22.189810182136426,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 22.19",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-10-22 22:03:36",
+        "symbol": "RXO",
+        "action": "BUY",
+        "price": 28.63,
+        "sma": 23.0504,
+        "rsi": 18.999597112175394,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 19.00",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-10-22 22:03:42",
+        "symbol": "GXO",
+        "action": "BUY",
+        "price": 49.015,
+        "sma": 46.4958,
+        "rsi": 28.718287823528584,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.72",
+        "currency": "USD"
     }
 ]
