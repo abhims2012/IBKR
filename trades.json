@@ -808,5 +808,15 @@
         "rsi": 26.22335406320164,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 26.22",
         "currency": "USD"
+    },
+    {
+        "date": "2026-11-19 10:30:37",
+        "symbol": "XRO",
+        "action": "BUY",
+        "price": 78.8,
+        "sma": 64.2166,
+        "rsi": 27.00628126574574,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 27.01",
+        "currency": "AUD"
     }
 ]
