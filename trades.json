@@ -638,5 +638,65 @@
         "rsi": 28.718287823528584,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.72",
         "currency": "USD"
+    },
+    {
+        "date": "2026-11-16 21:58:08",
+        "symbol": "UNP",
+        "action": "BUY",
+        "price": 301.07,
+        "sma": 287.6994,
+        "rsi": 28.958486837745156,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.96",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-11-16 21:58:23",
+        "symbol": "UPS",
+        "action": "BUY",
+        "price": 110.75,
+        "sma": 100.77699999999999,
+        "rsi": 29.31761525279117,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.32",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-11-16 21:58:36",
+        "symbol": "MMM",
+        "action": "BUY",
+        "price": 183.09,
+        "sma": 170.8964,
+        "rsi": 27.996072417446683,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.00",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-11-16 21:59:29",
+        "symbol": "UNP",
+        "action": "BUY",
+        "price": 301.07,
+        "sma": 287.6994,
+        "rsi": 28.958486837745156,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.96",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-11-16 22:02:28",
+        "symbol": "THO",
+        "action": "BUY",
+        "price": 65.755,
+        "sma": 71.8972,
+        "rsi": 29.323114628216658,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.32",
+        "currency": "USD"
+    },
+    {
+        "date": "2026-11-16 22:03:15",
+        "symbol": "UNP",
+        "action": "BUY",
+        "price": 301.07,
+        "sma": 287.6994,
+        "rsi": 28.95848683774517,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.96",
+        "currency": "USD"
     }
 ]
