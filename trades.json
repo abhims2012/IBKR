@@ -818,5 +818,25 @@
         "rsi": 27.00628126574574,
         "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 27.01",
         "currency": "AUD"
+    },
+    {
+        "date": "2026-11-19 11:16:31",
+        "symbol": "WES",
+        "action": "BUY",
+        "price": 77.62,
+        "sma": 76.99600000000001,
+        "rsi": 28.315893303730874,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 28.32",
+        "currency": "AUD"
+    },
+    {
+        "date": "2026-11-19 11:17:11",
+        "symbol": "SGP",
+        "action": "BUY",
+        "price": 4.385,
+        "sma": 4.2603,
+        "rsi": 29.452016812989385,
+        "rationale": "Sniper setup found! Price > 50-SMA & 15M-RSI = 29.45",
+        "currency": "AUD"
     }
 ]
